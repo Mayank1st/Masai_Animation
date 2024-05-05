@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(#e66465, #9198e5);
+        }
+        .container>div{
+            height: 300px;
+            width: 300px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .container>div:nth-of-type(1)
+        {
+            background-image: url('./jerry.png');
+            animation: jerry 2s infinite;
+            
+        }
+        .container>div:nth-of-type(2)
+        {
+            background-image: url('./tom.png');
+            animation: tom 2s infinite;
+        }
+        @keyframes tom{
+            0%{
+                transform: translateX(0vw);
+            }
+            100%{
+                transform: translateX(-30vw);
+                opacity: 0.2;
+            }
+        }
+        @keyframes jerry{
+            0%{
+                transform: translateX(0vw);
+            }
+            100%{
+                transform: translateX(30vw);
+                opacity: 0.2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
